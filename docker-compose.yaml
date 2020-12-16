@@ -1,13 +1,12 @@
 version: '3.8'
 services:
   backend:
-    image: antoniopapa1991/influencer-backend
+    image: antoniopapa1991/admin-backend
     environment:
       DB_HOST: db
-      DB_DATABASE: influencer
+      DB_DATABASE: admin
       DB_USERNAME: root
       DB_PASSWORD: root
-      CHECKOUT_URL: http://localhost:3000
     ports:
       - 8000:8000
     depends_on:
@@ -16,7 +15,7 @@ services:
   db:
     image: mysql:5.7.22
     environment:
-      MYSQL_DATABASE: influencer
+      MYSQL_DATABASE: admin
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: root
